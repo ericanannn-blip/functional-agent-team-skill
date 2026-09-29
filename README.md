@@ -31,6 +31,10 @@ Use $agent-team to implement a small change. Choose the needed subagents yoursel
 
 The router can work from bundled metadata without downloading upstream prompts. To load full selected specialist instructions, supply a clean local checkout of `wshobson/agents` at the catalog's exact `source_commit`. See [the operational guide](docs/FUNCTIONAL_AGENTS.md).
 
+### ChatGPT Work (remote)
+
+Local filesystem skills and `.cursor/agents` files are not automatically copied into a hosted ChatGPT Work environment. For remote Work, upload [the self-contained skill package](distribution/chatgpt-work/agent-team-chatgpt-work.zip) from **Plugins → Skills → Create → Upload from your computer**, wait for its scan, install it, then invoke it with `@agent-team`. This package includes the role guide and does not depend on local files. ChatGPT Work must expose subagents for the account; its subagent activity should appear in the chat when delegation runs.
+
 For use across local projects, install all six skill folders into `%USERPROFILE%\.codex\skills\` and the eight role files into `%USERPROFILE%\.cursor\agents\`. Check destination names before copying so existing personal configuration is preserved. The skill links remain inside the installed skill set; the standalone repository remains the source of truth.
 
 Model preferences are dispatch policy, not enforced by agent frontmatter. The actual model and tool permissions come from the host when each agent is invoked.
