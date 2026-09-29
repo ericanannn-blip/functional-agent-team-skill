@@ -30,4 +30,6 @@ Use functional-agent-orchestration to plan and implement a small change. Route s
 
 The router can work from bundled metadata without downloading upstream prompts. To load full selected specialist instructions, supply a clean local checkout of `wshobson/agents` at the catalog's exact `source_commit`. See [the operational guide](docs/FUNCTIONAL_AGENTS.md).
 
+For use across local projects, install all five skill folders into `%USERPROFILE%\.codex\skills\` and the eight role files into `%USERPROFILE%\.cursor\agents\`. Check destination names before copying so existing personal configuration is preserved. The skill links remain inside the installed skill set; the standalone repository remains the source of truth.
+
 Model preferences are dispatch policy, not enforced by agent frontmatter. The actual model and tool permissions come from the host when each agent is invoked.

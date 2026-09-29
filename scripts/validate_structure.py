@@ -48,6 +48,7 @@ def main():
     required += [AGENTS / f"{name}.md" for name in ROLES]
     required += [SKILLS / name / "SKILL.md" for name in SKILL_NAMES]
     required += [SKILLS / "functional-agent-orchestration" / "references" / name for name in REFERENCES]
+    required.append(SKILLS / "wshobson-router" / "references" / "source-setup.md")
     for path in required:
         if not path.is_file():
             errors.append(f"Missing: {path.relative_to(ROOT)}")
