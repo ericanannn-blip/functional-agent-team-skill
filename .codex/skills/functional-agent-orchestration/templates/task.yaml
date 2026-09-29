@@ -1,0 +1,13 @@
+objective: ""
+scope: []
+do_not_touch: []
+dependencies: []
+steps:
+  - id: step-1
+    action: ""
+    agent: ""
+    depends_on: []
+    parallelizable: false
+acceptance_criteria: []
+rollback: ""
+risk_level: low
