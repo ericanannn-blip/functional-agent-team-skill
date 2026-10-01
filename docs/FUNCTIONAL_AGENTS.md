@@ -25,8 +25,10 @@ Tier 0: Executor for simple deterministic work. Tier 1: Planner → Executor →
 ## Invocation
 
 ```text
-Use functional-agent-orchestration to plan and implement this repository change. Route only the needed expertise, verify the result, then request independent review.
+Use $agent-team to complete this repository change. Select and dispatch the needed subagents yourself, verify the result, and return the finished work.
 ```
+
+`agent-team` is the public entrypoint. It uses the existing functional-agent-orchestration references and role files as its backend. Invocation alone does not start agents; the running Codex host must provide a subagent creation tool. The Orchestrator must call that tool and wait for actual child outputs. If the tool is absent, the skill completes the task directly and reports that delegation did not occur.
 
 ```text
 Use wshobson-router for functional_role=analyst, task="diagnose a WireGuard handshake failure". Return only specialist metadata and confidence.

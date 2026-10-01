@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SKILLS = ROOT / ".codex" / "skills"
 AGENTS = ROOT / ".cursor" / "agents"
 ROLES = ["orchestrator", "researcher", "planner", "analyst", "executor", "verifier", "reviewer", "wshobson-router"]
-SKILL_NAMES = ["functional-agent-orchestration", "wshobson-router", "risk-check", "editor", "project-state"]
+SKILL_NAMES = ["agent-team", "functional-agent-orchestration", "wshobson-router", "risk-check", "editor", "project-state"]
 REFERENCES = ["roles.md", "routing.md", "workflows.md", "model-policy.md", "escalation.md", "permissions.md", "output-contracts.md", "failure-handling.md"]
 
 
